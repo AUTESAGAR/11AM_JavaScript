@@ -97,17 +97,55 @@
     //     alert("User Login Success");
     // }
 
-    var day = parseInt(prompt("Enter Day Number"));
-    if(day===1){ alert("Mon"); }
-    else if(day===2){ alert("Tue"); }
-    else if(day===3){ alert("Wens"); }
-    else if(day===4){ alert("Thur"); }
-    else if(day===5){ alert("Fri"); }
-    else if(day===6){ alert("Sat"); }
-    else if(day===7){ alert("Sun"); }
-    else{ alert("Enter Valid Day Number"); }
-    
+    // var day = parseInt(prompt("Enter Day Number"));
+    // if(day===1){ alert("Mon"); }
+    // else if(day===2){ alert("Tue"); }
+    // else if(day===3){ alert("Wens"); }
+    // else if(day===4){ alert("Thur"); }
+    // else if(day===5){ alert("Fri"); }
+    // else if(day===6){ alert("Sat"); }
+    // else if(day===7){ alert("Sun"); }
+    // else{ alert("Enter Valid Day Number"); }    
 </script>
+
+<!-- <input type="text" id="uname">
+<input type="text" id="pwd">
+<button onclick="login()">Login</button>
+<script>
+    function login(){
+        var uname = document.getElementById("uname").value;
+        var pwd = document.getElementById("pwd").value;
+        if(uname==="Admin@123" && pwd==="Admin@123")
+        {
+            alert("Login Success");
+        }
+        else{
+            alert("Login Fail");
+        }
+    }
+</script> -->
+
+<input type="text" id="percentage" placeholder="Enter Percentage">
+<button onclick="result()">Show Result</button>
+<script>
+    function result(){
+        var percentage = document.getElementById("percentage").value;        
+        if(percentage>=35)
+        {
+            alert("Pass");
+        }
+        else{
+            alert("Fail");
+        }
+    }
+</script>
+
+
+
+
+
+
+
 
 
 
