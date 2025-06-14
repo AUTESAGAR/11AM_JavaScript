@@ -1,0 +1,63 @@
+<!-- <input type="number" id="month" placeholder="Enter Month Number">
+<button onclick="check()">Check</button>
+<script>
+    function check(){
+        let month = document.getElementById("month").value;
+        if(month==0){
+            document.writeln("Jan");
+        }
+        else if(month==1){
+            document.writeln("Feb");
+        }        
+        else{
+            document.writeln("Month Not Found");
+        }
+    }
+</script> -->
+
+<!-- <script>
+    let time = parseFloat(prompt("Enter Time Value"));
+    if(time>=0.1 && time<12){
+        document.writeln("Good Morning");
+    }
+    else if(time>11.59 && time<15.59){
+        document.writeln("Good Afternoon");
+    }        
+    else if(time>=16 && time<19.59){
+        document.writeln("Good Evening");
+    }
+    else if(time>=20 && time<=24){
+        document.writeln("Good Night");
+    }
+    else{
+        document.writeln("Enter Valid Time");
+    }
+</script> -->
+
+<select id="change" onchange="change()">
+    <option value="0">Select Day Value</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+<span id="result"></span>
+<script>
+    function change(){
+        let day = Number(document.getElementById("change").value);
+        console.log(typeof day);
+        switch(day){
+            case 1:
+                document.getElementById("result").innerText= "Mon";
+                break;
+            case 2:
+                document.getElementById("result").innerText="Tues";
+                break;
+            case 3:
+                document.getElementById("result").innerText="Wed";
+                break;
+            default:
+                document.getElementById("result").innerText="Day Value Not Found";
+                break;
+        }
+    }
+</script>
