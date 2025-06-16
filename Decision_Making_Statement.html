@@ -34,7 +34,7 @@
     }
 </script> -->
 
-<select id="change" onchange="change()">
+<!-- <select id="change" onchange="change()">
     <option value="0">Select Day Value</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -58,6 +58,70 @@
             default:
                 document.getElementById("result").innerText="Day Value Not Found";
                 break;
+        }
+    }
+</script> -->
+
+<!-- <script>
+    let list = prompt("Enter List Name");
+    switch(list){
+        case "software":
+            document.writeln(`<ul>
+                <li>Paint</li>
+                <li>Ms Office</li>
+                <li>Vs Code</li>
+                <li>Chrome</li>
+            </ul>`);
+            break;
+        case "hardware":
+            document.writeln(`<ul>
+                <li>Monitor</li>
+                <li>Keyboard</li>
+                <li>Mouse</li>
+                <li>Projector</li>
+            </ul>`);
+            break;
+        default:
+            document.writeln("Enter Valid List Name");
+    }
+</script> -->
+
+<!-- <script>
+    let no1 = parseInt(prompt("Enter No1 "));
+    let no2 = parseInt(prompt("Enter No2 "));
+    let op = prompt("+ - * /");
+    switch(op){
+        case "+":
+            document.writeln("Result : ",no1+no2)
+            break;
+        case "-":
+            document.writeln("Result : ",no1-no2)
+            break;
+        case "*":
+            document.writeln("Result : ",no1*no2)
+            break;
+        case "/":
+            document.writeln("Result : ",no1/no2)
+            break;
+        default:
+            document.writeln("Enter Valid List Name");
+    }
+</script> -->
+
+<input type="text" id="no1" placeholder="Enter no1">
+<input type="text" id="no2" placeholder="Enter no2">
+<p>Result : <span id="result"></span></p>
+<button onclick="calc('+')">add</button>
+<script>
+    function calc(op) {
+        let no1 = Number(document.getElementById("no1").value);
+        let no2 = Number(document.getElementById("no2").value);
+        switch (op) {
+            case "+":
+                document.getElementById("result").innerText = no1 + no2;
+                break;
+            default:
+                document.writeln("Enter Valid List Name");
         }
     }
 </script>
