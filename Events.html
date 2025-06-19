@@ -1,0 +1,18 @@
+<h1></h1>
+<script>
+    let count = 0;
+    function updateCounter() {
+      document.querySelector("h1").innerText = count;
+    }
+    function increment() {
+      count += 1;
+      updateCounter();
+    }
+    function decrement() {
+      count -= 1;
+      updateCounter();
+    }
+    updateCounter();
+</script>
+<button onclick="increment()">Like</button>
+<button onclick="decrement()">Unlike</button>
