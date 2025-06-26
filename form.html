@@ -1,0 +1,21 @@
+<center>
+    <h3>User Login</h3>
+    <form action="./array.html" method="post">
+        <p><input type="text" name="uname" id="uname" placeholder="Enter Your Username"></p>
+        <p><input type="password" name="pwd" id="pwd" placeholder="Enter Your Password"></p>
+        <p><input type="submit" value="Login" name="login" id="login"></p>
+    </form>
+</center>
+<script>
+    document.getElementById("login").addEventListener("click",function(){
+        let uname = document.getElementById("uname").value
+        let pwd = document.getElementById("pwd").value
+        if(uname==="Samir@123" && pwd==="Samir@123")    
+        {
+            window.location.assign("array.html");
+        }
+        else{
+            alert("Enter Valid Credentials");
+        }
+    })
+</script>
