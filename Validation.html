@@ -1,0 +1,30 @@
+    <h1>Login User</h1>
+    <input type="text" name="" id="uname">
+    <img src="" height="15px" id="uname_msg">    
+    <br><br>
+    <input type="text" name="" id="pwd">
+    <img src="" height="15px" id="pwd_msg">
+    <br><br>
+    <button id="login">Login</button>
+    <script>
+        document.getElementById("uname").addEventListener("keyup",function(){
+            let uname = this.value;
+            if(uname!=""){
+                document.getElementById("uname_msg").src="Right.jpg";
+            }
+            if(uname==""){
+                document.getElementById("uname_msg").src="Wrong.jpg";
+            }
+        })
+        document.getElementById("pwd").addEventListener("keyup",function(){
+            let uname = this.value;
+            if(uname!=""){
+                document.getElementById("pwd_msg").src="Right.jpg";
+            }
+            if(uname==""){
+                document.getElementById("pwd_msg").src="Wrong.jpg";
+            }
+        })
+    </script>
+</body>
+</html>

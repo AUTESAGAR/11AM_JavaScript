@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: auto;
+            width: 400px;
+            text-align: center;
+        }
+
+        input{
+            height: 30px;
+            width: 250px;
+            border: 2px solid;
+            margin-top: 10px;
+        }
+        #valid{
+            height: 30px;
+            width: 30px;
+            border: 2px solid;
+        }
+        button{
+            margin-top: 10px;
+            height: 30px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <input type="text" name="" id="uname"> 
+        <div id="valid">
+            <img src="" height="30px" id="uname_msg">
+        </div>        
+    </main>
+    <main>
+        <input type="text" name="" id="pwd"> 
+        <div id="valid">
+            <img src="" height="30px" id="pwd_msg">
+        </div>        
+    </main>    
+    <main>        
+        <button id="login">Login</button>
+    </main>
+    
+    <script>
+        document.getElementById("uname").addEventListener("keyup",function(){
+            let uname = this.value;
+            if(uname!=""){
+                document.getElementById("uname_msg").src="Right.jpg";
+            }
+            if(uname==""){
+                document.getElementById("uname_msg").src="Wrong.jpg";
+            }
+        })
+        document.getElementById("pwd").addEventListener("keyup",function(){
+            let uname = this.value;
+            if(uname!=""){
+                document.getElementById("pwd_msg").src="Right.jpg";
+            }            
+            if(uname==""){
+                document.getElementById("pwd_msg").src="Wrong.jpg";
+            }            
+        })
+    </script>
+</body>
+</html>
