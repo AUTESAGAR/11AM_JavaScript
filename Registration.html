@@ -1,0 +1,60 @@
+<center>
+    <h3>User Registration</h3>
+    <p><input type="text" name="" id="fullname" placeholder="FullName"> <img src="" alt="" height="12px" id="msg_fullname"></p>
+    <p><input type="text" name="" id="uname" placeholder="uname"> <img src="" alt="" height="12px" id="msg_uname"></p>    
+    <p><input type="text" name="" id="pwd" placeholder="pwd"> <img src="" alt="" height="12px" id="msg_pwd"></p>
+    <p><input type="text" name="" id="c_pwd" placeholder="c_pwd"> <img src="" alt="" height="12px" id="msg_c_pwd"></p>
+    <p><input type="text" name="" id="mobile" placeholder="mobile"> <img src="" alt="" height="12px" id="msg_mobile"></p>
+    <p><input type="text" name="" id="email" placeholder="email"> <img src="" alt="" height="12px" id="msg_email"></p>
+    <p>
+        <select name="gender" id="gender">
+            <option value="0">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </p>
+    <p><button id="login">Login</button></p>
+</center>
+<script>    
+    var pwd;    
+    document.getElementById("fullname").addEventListener("keyup",function(){
+        var fullname = this.value;
+        let fullname_verify= /^[a-zA-Z]+(?: [a-zA-Z]+(?:[-'][a-zA-Z]+)*)*$/;
+        if(!fullname_verify.test(fullname.trim(" "))){
+            document.getElementById("msg_fullname").src="Wrong.jpg";
+        }
+        else{
+            document.getElementById("msg_fullname").src="Right.jpg";
+        }
+    })
+
+    document.getElementById("uname").addEventListener("change",function(){
+        var uname = this.value;
+        if(uname!=""){
+            document.getElementById("msg_uname").src="Right.jpg";
+        }
+        else{
+            document.getElementById("msg_uname").src="Wrong.jpg";
+        }
+    })
+    document.getElementById("pwd").addEventListener("keyup",function(){
+        pwd = this.value;
+        var pwd_verify = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if(!pwd_verify.test(pwd)){
+            document.getElementById("msg_pwd").src="Wrong.jpg";
+        }
+        else{
+            document.getElementById("msg_pwd").src="Right.jpg";
+        }
+    })
+    document.getElementById("c_pwd").addEventListener("keyup",function(){
+        var c_pwd = this.value;
+        if(c_pwd===pwd){
+            document.getElementById("msg_c_pwd").src="Right.jpg";
+        }
+        else{
+            document.getElementById("msg_c_pwd").src="Wrong.jpg";
+        }
+    })
+</script>
