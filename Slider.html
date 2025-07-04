@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            height: 300px;
+            width: 1000px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <img src="./slide-2.jpg">
+    <script>
+        function slide1(){document.querySelector("img").src="./slide-1.jpg"}
+        function slide2(){document.querySelector("img").src="./slide-2.jpg"}
+        function slide3(){document.querySelector("img").src="./slide-3.jpg"}        
+        setInterval(slide1,5000);
+        setInterval(slide3,10000);
+        setInterval(slide2,15000);
+    </script>
+</body>
+</html>
