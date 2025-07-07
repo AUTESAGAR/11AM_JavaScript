@@ -1,0 +1,9 @@
+
+<p id="get">Samir</p>
+<p>Hello <span id="set"></span> </p>
+<script>
+    document.getElementById("get").addEventListener("click",function(){            
+        document.getElementById("set").innerText = this.innerText;
+        document.getElementById("set").style.cssText="font-weight:bold";
+    })
+</script>
