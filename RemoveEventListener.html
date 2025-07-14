@@ -1,0 +1,9 @@
+<button>Click</button>
+<script>
+    function a(){alert("Welcome Form A")}
+    function b(){alert("Welcome Form B")}
+    let dom = document.querySelector("button");
+        dom.addEventListener("click",a)
+        dom.addEventListener("click",b)                
+        dom.removeEventListener("click",a)
+</script>

@@ -1,0 +1,14 @@
+<style>
+    .a{background: white;}
+    .b{background: black;}
+</style>
+
+<body class="a">    
+    <button>@</button>
+    
+    <script>
+        document.querySelector("button").addEventListener("click",function(){
+            document.querySelector("body").classList.toggle("b");
+        })
+    </script>
+</body>
