@@ -1,0 +1,31 @@
+<script>
+    fetch("https://fakestoreapi.com/products")
+    .then(function(res){ return res.json();})
+    .then(function(result){        
+        document.writeln(`<div style="height: 350px;border: 2px solid red;background: red;"></div>`)        
+
+        result.forEach((data,index) => {                        
+            document.writeln(`<p class="main"></p>`);
+            document.writeln(`<p> <img src=${data.image} height='150px'> </p>`);
+            document.writeln(`<p><b>title :</b>  ${data.title} </p>`);
+            document.writeln(`<p><b>price : ${data.price} </b> </p>`);
+            document.writeln(`<p><b>description :</b>  ${data.description} </p>`);
+            document.writeln(`<p><b>category :</b>  ${data.category} </p>`);
+        });        
+
+        document.writeln(`</div>`)
+
+        // document.writeln(result[0].title+"<br>");
+        // document.writeln(result[0].price+"<br>");
+        // document.writeln(result[0].description+"<br>");
+        // document.writeln(result[0].category+"<br>");
+
+    })
+
+    // async function getData(){
+    //     let data = await fetch("https://fakestoreapi.com/products");
+    //     let final = data.json();
+    //     console.log(final);
+    // }    
+    // getData();
+</script>
